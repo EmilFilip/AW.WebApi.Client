@@ -1,0 +1,38 @@
+﻿@model IEnumerable<AW.UI.Models.ProductCategory>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+@using (Html.BeginForm("Index","Product",FormMethod.Post))
+{
+    <button type="submit" class="btn">Create New Product</button>
+}
+<div>
+    <div style="display:inline-block; margin-right:30px;width: 200px;">
+        <select class="form-control" id="categorySelectBox">
+            <option value="" disabled selected>Select Category</option>
+            @foreach (var item in this.Model)
+            {
+                <option value=@item.Id>@item.Name</option>
+            }
+        </select>
+    </div>
+    <div style="display:inline-block; width: 200px;">
+        <select class="form-control" id="subcategorySelectBox">
+        </select>
+    </div>
+</div>
+<table id="productsGrid">
+    <tr>
+        <th style="width:150px;">Id</th>
+        <th style="width:150px;">Key</th>
+        <th style="width:150px;">Name</th>
+        <th style="width:150px;">ListPrice</th>
+        <th style="width:150px;">StockLevel</th>
+        <th style="width:150px;">Actions</th>
+    </tr>
+</table>
+@section scripts
+{
+    @Scripts.Render("~/Scripts/home-page.js");
+}
