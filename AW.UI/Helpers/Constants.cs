@@ -12,7 +12,7 @@ namespace AW.UI.Helpers
 
         public const string baseLink = "http://localhost:57578/api/";
         public const string categoriesLink = "ProductCategory/GetproductCategories";
-        public const string subcategoriesLink = "ProductCategory/GetProductSubcategoriesByProductCategoryId/";
+        public const string subcategoriesLink = "ProductSubCategory/GetProductSubcategoriesByProductCategoryId/";
         public const string subcategoryProductsLink = "ProductSubcategory/GetProductsByProductSubCategory/";
         public const string createProductLink = "Product/CreateProduct/";
     }

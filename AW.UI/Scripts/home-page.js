@@ -25,7 +25,7 @@ function HomePage() {
                     $("#subcategorySelectBox").append( // Append an object to the inside of the select box
                         $("<option></option>") // Yes you can do this.
                             .text(item.Name)
-                            .val(item.Id)
+                            .val(item.Key)
                     );
                 });
             },

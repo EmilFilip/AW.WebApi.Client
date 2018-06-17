@@ -11,11 +11,12 @@ namespace AW.UI.ViewModels
     {
 
         [Required]
-        public string Key { get; set; }
+        [DisplayName("Alternate Key")]
+        public string AlternateKey { get; set; }
 
         [Required]
-        [DisplayName("Product Subcategory Id")]
-        public int ProductSubcategoryId { get; set; }
+        [DisplayName("Product Subcategory Key")]
+        public int ProductSubcategoryKey { get; set; }
 
         [Required]
         [DisplayName("Product Name")]
