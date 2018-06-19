@@ -38,5 +38,13 @@ namespace AW.UI.Controllers
 
             return RedirectToAction("Index", "Home");
         }
+
+        [HttpPost]
+        public async Task<ActionResult> Delete(int productId)
+        {
+            await _iAcccessWebApi.PostAsync<int>(Constants.deleteProductLink, productId);
+
+            return RedirectToAction("Index", "Home");
+        }
     }
 }
