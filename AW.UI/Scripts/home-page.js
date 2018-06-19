@@ -45,7 +45,7 @@ function HomePage() {
                 $.each(data, function (index, item) { // Iterates through a collection
                     $("#productsGrid").append(
                         "<tr><td>" + item.Id + "</td>" +
-                        "<td>" + item.Key + "</td>" +
+                        "<td>" + item.AlternateKey + "</td>" +
                         "<td>" + item.Name + "</td>" +
                         "<td>" + item.Price + "</td>" +
                         "<td>" + item.StockLevel + "</td>" +

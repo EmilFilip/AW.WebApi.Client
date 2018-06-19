@@ -28,6 +28,7 @@ namespace AW.UI.Controllers
             return View(categories);
         }
 
+        [HttpGet]
         public async Task<JsonResult> GetSubcategories(int categoryId)
         {
             var subcategories = await _iAcccessWebApi.GetAsync<ProductSubcategory>(Constants.subcategoriesLink + categoryId);
@@ -35,6 +36,7 @@ namespace AW.UI.Controllers
             return Json(subcategories, JsonRequestBehavior.AllowGet);
         }
 
+        [HttpGet]
         public async Task<JsonResult> GetProducts(int subcategoryId)
         {
             var products = await _iAcccessWebApi.GetAsync<Product>(Constants.subcategoryProductsLink + subcategoryId);

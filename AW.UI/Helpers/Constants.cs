@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace AW.UI.Helpers
+﻿namespace AW.UI.Helpers
 {
     public static class Constants
     {
@@ -12,8 +7,9 @@ namespace AW.UI.Helpers
 
         public const string baseLink = "http://localhost:57578/api/";
         public const string categoriesLink = "ProductCategory/GetproductCategories";
-        public const string subcategoriesLink = "ProductSubCategory/GetProductSubcategoriesByProductCategoryId/";
-        public const string subcategoryProductsLink = "ProductSubcategory/GetProductsByProductSubCategory/";
+        public const string subcategoriesLink = "CategorySubcategories/";
+        public const string subcategoryProductsLink = "GetProductsByProductSubCategory/";
         public const string createProductLink = "Product/CreateProduct/";
+        public const string deleteProductLink = "Product/DeleteProduct/";
     }
 }
